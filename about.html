@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Rivermark Group</title>
+  <meta name="description" content="About Rivermark Group and our focus on applied, data-driven work." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <div class="page">
+    <nav class="nav">
+      <div class="brand">
+        <a href="index.html">Rivermark Group</a>
+        <small>Applied analytics & operational execution</small>
+      </div>
+      <div class="navlinks">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+      </div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" aria-current="page">About</a>
+      </div>
+    </nav>
+
+    <header class="container hero">
+      <h1>About</h1>
+      <p>Low-ego work: careful analysis, practical implementation, and clear communication.</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>What Rivermark is</h2>
+        <p>
+          Rivermark Group is an independent practice focused on applied analytics and operational improvement.
+          The emphasis is practical work: defining metrics, building reporting workflows, and clarifying processes.
+        </p>
+        <p>
+          We bring particular experience working with healthcare and insurance-related data and operational contexts,
+          where accuracy and defensible decisions matter.
+        </p>
+      </section>
+
+      <section class="grid two">
+        <div class="card">
+          <h2>Principles</h2>
+          <ul>
+            <li>Clarity over jargon</li>
+            <li>Deliverables over vibes</li>
+            <li>Documented work that others can maintain</li>
+            <li>Measured outcomes where possible</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Contact</h2>
+          <p>
+            Email is best:
+            <a href="mailto:contact@rivermarkgroup.org">contact@rivermarkgroup.org</a>
+          </p>
+          <p>
+            If you want, include: your goal, your data/tools, and your timeline.
+          </p>
+        </div>
+      </section>
+
+      <div class="footer">© <span id="year"></span> Rivermark Group</div>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
