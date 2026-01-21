@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thanks | Rivermark Group</title>
+  <meta name="description" content="Thanks for contacting Rivermark Group." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background" aria-hidden="true"></div>
+
+  <div class="nav-wrap">
+    <nav class="nav container" aria-label="Main">
+      <a class="brandlink" href="index.html">
+        <img class="logo" src="assets/logo.png" alt="Rivermark Group logo" />
+        <span class="brandtext">
+          <span class="brandname">Rivermark Group</span>
+          <span class="brandtag">Applied analytics &amp; operational execution</span>
+        </span>
+      </a>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="button nav-cta" href="contact.html">Schedule a consultation</a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="page">
+    <header class="container hero">
+      <h1>Thanks</h1>
+      <p>Your message has been sent. We will be in touch shortly.</p>
+    </header>
+
+    <main class="container">
+      <section class="section card">
+        <h2>We received your request</h2>
+        <p>
+          If your timeline is urgent, feel free to email us directly at
+          <a href="mailto:contact@rivermarkgroup.org">contact@rivermarkgroup.org</a>.
+        </p>
+        <div class="cta-row">
+          <a class="button" href="index.html">Back to home</a>
+        </div>
+      </section>
+
+      <div class="footer">Ac <span id="year"></span> Rivermark Group</div>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
