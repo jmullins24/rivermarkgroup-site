@@ -13,8 +13,11 @@ const styles = {
   primary:
     "bg-ink-900 text-white hover:bg-ink-700 focus-visible:outline-ink-900",
   secondary:
-    "border border-ink-300 text-ink-800 hover:border-ink-500 hover:text-ink-900 focus-visible:outline-ink-700 bg-white/70"
+    "border border-ink-300 text-ink-800 hover:border-ink-500 hover:text-ink-900 focus-visible:outline-ink-700 bg-white/70",
+  light:
+    "bg-sand-100 text-ink-900 hover:bg-white focus-visible:outline-white"
 };
+
 ---
 {href ? (
   <a href={href} class={`${base} ${styles[variant]} ${className}`}>
