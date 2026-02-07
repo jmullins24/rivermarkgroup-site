@@ -3,27 +3,29 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Section from "../../components/Section.astro";
 import Card from "../../components/Card.astro";
 import Button from "../../components/Button.astro";
----
+
 const offerings = [
   {
     title: "Analytics Strategy",
     description:
       "Build a decision-ready data foundation and a metrics language your teams can trust.",
-    href: "/services/analytics"
+    href: "/services/analytics",
   },
   {
     title: "Operations Excellence",
     description:
       "Improve throughput, clarify ownership, and reduce friction across critical workflows.",
-    href: "/services/operations"
+    href: "/services/operations",
   },
   {
     title: "Automation Enablement",
     description:
       "Identify high-value automation, design governance, and enable delivery teams.",
-    href: "/services/automation"
-  }
+    href: "/services/automation",
+  },
 ];
+---
+
 <BaseLayout
   title="Services | Rivermark Group"
   description="Strategy and execution services across analytics, operations, and automation."
