@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+---
+<BaseLayout
+  title="About | Rivermark Group"
+  description="Rivermark Group is a consulting partner focused on analytics, operations, and automation."
+>
+  <Section
+    eyebrow="About"
+    title="Senior, hands-on consulting built for modern leaders"
+    intro="Rivermark Group is a boutique consultancy that blends strategy and execution. We work with leadership teams that need clarity, speed, and measurable outcomes."
+  >
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card>
+        <h3 class="text-xl">Focused expertise</h3>
+        <p class="mt-3 text-sm text-ink-600">
+          We specialize in analytics, operational excellence, and automation enablement.
+        </p>
+      </Card>
+      <Card>
+        <h3 class="text-xl">Practical delivery</h3>
+        <p class="mt-3 text-sm text-ink-600">
+          We stay close to the work, aligning stakeholders and supporting delivery teams.
+        </p>
+      </Card>
+      <Card>
+        <h3 class="text-xl">Clear outcomes</h3>
+        <p class="mt-3 text-sm text-ink-600">
+          Every engagement is anchored in measurable goals and transparent progress.
+        </p>
+      </Card>
+    </div>
+  </Section>
+</BaseLayout>

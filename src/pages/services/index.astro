@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import Card from "../../components/Card.astro";
+import Button from "../../components/Button.astro";
+
+const offerings = [
+  {
+    title: "Analytics Strategy",
+    description:
+      "Build a decision-ready data foundation and a metrics language your teams can trust.",
+    href: "/services/analytics"
+  },
+  {
+    title: "Operations Excellence",
+    description:
+      "Improve throughput, clarify ownership, and reduce friction across critical workflows.",
+    href: "/services/operations"
+  },
+  {
+    title: "Automation Enablement",
+    description:
+      "Identify high-value automation, design governance, and enable delivery teams.",
+    href: "/services/automation"
+  }
+];
+---
+<BaseLayout
+  title="Services | Rivermark Group"
+  description="Strategy and execution services across analytics, operations, and automation."
+>
+  <Section
+    eyebrow="Services"
+    title="Focused engagements built around measurable outcomes"
+    intro="Each engagement is tailored to leadership priorities, with a clear path from diagnosis to delivery."
+  >
+    <div class="grid gap-6 md:grid-cols-3">
+      {offerings.map((offering) => (
+        <Card>
+          <h3 class="text-xl">{offering.title}</h3>
+          <p class="mt-3 text-sm text-ink-600">{offering.description}</p>
+          <a
+            href={offering.href}
+            class="mt-6 inline-flex text-sm font-semibold text-ink-900"
+          >
+            View details →
+          </a>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <Section
+    eyebrow="Engagement model"
+    title="Small, senior teams with clear accountability"
+    intro="We stay close to leadership and delivery teams, with weekly checkpoints and transparent progress."
+  >
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card>
+        <h3 class="text-xl">Discovery sprint</h3>
+        <p class="mt-3 text-sm text-ink-600">
+          Two to four weeks to align on scope, current state, and quick wins.
+        </p>
+      </Card>
+      <Card>
+        <h3 class="text-xl">Roadmap & design</h3>
+        <p class="mt-3 text-sm text-ink-600">
+          Outcome-oriented plans with milestones, owners, and risk mitigation.
+        </p>
+      </Card>
+      <Card>
+        <h3 class="text-xl">Delivery support</h3>
+        <p class="mt-3 text-sm text-ink-600">
+          Embedded consulting to accelerate execution and capability transfer.
+        </p>
+      </Card>
+    </div>
+    <div class="mt-10">
+      <Button href="/contact">Schedule a consult</Button>
+    </div>
+  </Section>
+</BaseLayout>

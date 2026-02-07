@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-sand-100 text-ink-800 font-sans antialiased;
+  background-image: radial-gradient(circle at top left, rgba(20, 184, 166, 0.12), transparent 50%),
+    radial-gradient(circle at 30% 10%, rgba(15, 118, 110, 0.12), transparent 45%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-serif text-ink-900 tracking-tight;
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+.markdown h2 {
+  @apply mt-10 text-2xl font-serif text-ink-900;
+}
+
+.markdown h3 {
+  @apply mt-8 text-xl font-serif text-ink-900;
+}
+
+.markdown ul {
+  @apply list-disc space-y-2 pl-5 text-ink-700;
+}
+
+.markdown a {
+  @apply text-ink-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-300;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+::selection {
+  background: rgba(20, 184, 166, 0.25);
+}

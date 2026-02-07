@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+
+const industries = [
+  {
+    title: "Financial services",
+    description:
+      "Risk-aware analytics and operational improvements for banks, insurers, and fintech teams."
+  },
+  {
+    title: "Healthcare & life sciences",
+    description:
+      "Data governance and process clarity that support clinical, operational, and commercial goals."
+  },
+  {
+    title: "Manufacturing & logistics",
+    description:
+      "Throughput optimization, visibility, and automation across supply chains and plants."
+  },
+  {
+    title: "Technology & SaaS",
+    description:
+      "Scaling analytics, operations, and revenue workflows as teams grow."
+  },
+  {
+    title: "Public sector",
+    description:
+      "Outcome-focused modernization with clear governance and stakeholder alignment."
+  },
+  {
+    title: "Retail & consumer",
+    description:
+      "Customer, inventory, and fulfillment improvements driven by reliable data."
+  }
+];
+---
+<BaseLayout
+  title="Industries | Rivermark Group"
+  description="Industry-focused consulting support across financial services, healthcare, manufacturing, and more."
+>
+  <Section
+    eyebrow="Industries"
+    title="Deep experience across complex operating environments"
+    intro="We tailor our approach to industry-specific constraints, regulatory needs, and operating models."
+  >
+    <div class="grid gap-6 md:grid-cols-3">
+      {industries.map((industry) => (
+        <Card>
+          <h3 class="text-xl">{industry.title}</h3>
+          <p class="mt-3 text-sm text-ink-600">{industry.description}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

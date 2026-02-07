@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
+---
+<BaseLayout
+  title="Contact | Rivermark Group"
+  description="Schedule a consultation with Rivermark Group."
+>
+  <Section
+    eyebrow="Contact"
+    title="Start the conversation"
+    intro="Tell us about your goals, timelines, and where you need support. We typically respond within two business days."
+  >
+    <div class="grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
+      <!-- Contact form -->
+      <Card>
+        <form
+          action="https://formspree.io/f/xnjjwpod"
+          method="POST"
+          class="grid gap-5"
+        >
+          <div class="grid gap-4 md:grid-cols-2">
+            <label class="grid gap-2 text-sm font-semibold text-slate-700">
+              First name
+              <input
+                type="text"
+                name="first_name"
+                autocomplete="given-name"
+                required
+                class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm focus:border-slate-600 focus:outline-none"
+                placeholder="Jordan"
+              />
+            </label>
+
+            <label class="grid gap-2 text-sm font-semibold text-slate-700">
+              Last name
+              <input
+                type="text"
+                name="last_name"
+                autocomplete="family-name"
+                required
+                class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm focus:border-slate-600 focus:outline-none"
+                placeholder="Lee"
+              />
+            </label>
+          </div>
+
+          <div class="grid gap-4 md:grid-cols-2">
+            <label class="grid gap-2 text-sm font-semibold text-slate-700">
+              Email
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+                class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm focus:border-slate-600 focus:outline-none"
+                placeholder="jordan@company.com"
+              />
+            </label>
+
+            <label class="grid gap-2 text-sm font-semibold text-slate-700">
+              Phone (optional)
+              <input
+                type="tel"
+                name="phone"
+                autocomplete="tel"
+                class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm focus:border-slate-600 focus:outline-none"
+                placeholder="(555) 123-4567"
+              />
+            </label>
+          </div>
+
+          <label class="grid gap-2 text-sm font-semibold text-slate-700">
+            Message
+            <textarea
+              name="message"
+              rows="5"
+              required
+              class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm focus:border-slate-600 focus:outline-none"
+              placeholder="Tell us about your goals, challenges, and timelines."
+            ></textarea>
+          </label>
+
+          <!-- Honeypot (spam protection) -->
+          <input
+            type="text"
+            name="_gotcha"
+            style="display:none"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <!-- Redirect after submit -->
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://rivermarkgroup.org/thanks"
+          />
+
+          <Button type="submit">Send message</Button>
+        </form>
+      </Card>
+
+      <!-- Sidebar -->
+      <Card>
+        <h3 class="text-xl font-semibold">Engagement fit</h3>
+        <p class="mt-3 text-sm text-slate-600">
+          We typically partner with leadership teams that need to translate strategy
+          into measurable execution.
+        </p>
+
+        <ul class="mt-6 space-y-3 text-sm text-slate-600">
+          <li>Analytics & KPI alignment</li>
+          <li>Operational redesign</li>
+          <li>Automation roadmaps</li>
+        </ul>
+
+        <p class="mt-6 text-sm text-slate-600">
+          Prefer email? Reach us at
+          <span class="font-semibold"> contact@rivermarkgroup.org</span>.
+        </p>
+      </Card>
+    </div>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+  title = "Rivermark Group",
+  description = "Strategy-led consulting for data, operations, and automation initiatives."
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.toString()} />
+    <meta property="og:image" content="/og-image.jpg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://analytics.ahrefs.com/analytics.js"
+      data-key="cPWx+49wnmLChWdQdHi4DQ"
+      async
+    ></script>
+  </head>
+  <body class="min-h-screen">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

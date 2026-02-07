@@ -1,16 +1,15 @@
 # rivermarkgroup-site
-Static site for rivermarkgroup.org
+Astro + Tailwind site for rivermarkgroup.org.
 
-Static website for Rivermark Group, hosted via GitHub Pages.
+## Development
+- Install dependencies: `npm install`
+- Run locally: `npm run dev`
+- Production build: `npm run build`
+- Preview build: `npm run preview`
 
-This repository contains the HTML, CSS, and assets for the public site.
+## Content
+- Work case studies: `src/content/work`
+- Insights posts: `src/content/insights`
 
 ## Assets
-- Background image: `assets/bg.jpg`
-- Logo: `assets/logo.png`
-
-### Recommended sizes
-- Hero background: 2400px wide (JPG or WebP).
-- Logo: 256px square (PNG or SVG).
-
-When updating images, keep paths relative (e.g., `assets/bg.jpg`) so they work on GitHub Pages.
+Static assets live in `public/`.
