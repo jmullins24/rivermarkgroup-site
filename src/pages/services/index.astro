@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Section from "../../components/Section.astro";
 import Card from "../../components/Card.astro";
 import Button from "../../components/Button.astro";
-
+---
 const offerings = [
   {
     title: "Analytics Strategy",
@@ -11,6 +11,8 @@ const offerings = [
       "Build a decision-ready data foundation and a metrics language your teams can trust.",
     href: "/services/analytics"
   },
+  ...
+];
   {
     title: "Operations Excellence",
     description:
