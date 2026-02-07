@@ -9,12 +9,17 @@ const links = [
 ---
 <header class="sticky top-0 z-50 border-b border-white/80 bg-sand-100/80 backdrop-blur">
   <nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-    <a href="/" class="flex items-center gap-3 text-lg font-semibold text-ink-900">
-      <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink-900 text-white">
-        R
+    <a href="/" class="flex items-center gap-3">
+      <img
+        src="/logo.png"
+        alt="Rivermark Group"
+        class="h-10 w-10 object-contain"
+      />
+      <span class="text-lg font-semibold text-ink-900">
+        Rivermark Group
       </span>
-      Rivermark Group
     </a>
+
     <div class="hidden items-center gap-8 text-sm font-semibold text-ink-700 md:flex">
       {links.map((link) => (
         <a href={link.href} class="hover:text-ink-900">
