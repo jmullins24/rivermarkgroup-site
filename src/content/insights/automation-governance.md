@@ -37,7 +37,7 @@ Security and compliance should not be a final gate. Instead, align automation ch
 
 #### C. Standardized Playbooks (The "Internal Franchise" Model)
 
-Treat your automation center of excellence (CoE) like a franchisor. Provide the "store owners" (business units) with:
+Treat your automation center of excellence like a franchisor. Provide the "store owners" (business units) with:
 
 * Reusable Templates: Pre-built components for error handling, logging, and change management.
 * Risk Tiers: Establish that Low Risk automations (e.g., personal productivity) require zero oversight, while High Risk (e.g., automated payments) require a full council review.
