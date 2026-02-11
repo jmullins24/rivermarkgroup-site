@@ -29,7 +29,9 @@ async function getAccessToken(code, clientId, clientSecret) {
   });
 
   if (!response.ok) {
-    throw new Error(`GitHub token exchange failed with status ${response.status}`);
+    throw new Error(
+      `GitHub token exchange failed with status ${response.status}`
+    );
   }
 
   const data = await response.json();
@@ -55,40 +57,67 @@ export default async function handler(req, res) {
     }
 
     const token = await getAccessToken(code, clientId, clientSecret);
-    const payload = JSON.stringify({ token });
+
+    // IMPORTANT: pass data safely into the inline script
+    const safeOrigin = JSON.stringify(origin);
+    const safeToken = JSON.stringify(token);
 
     res.setHeader(
       "Set-Cookie",
       "decap_oauth_state=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0"
     );
-    res.setHeader("Content-Type", "text/html");
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+
     res.status(200).send(`<!doctype html>
 <html>
   <body>
     <script>
       (function() {
+        var origin = ${safeOrigin};
+        var token = ${safeToken};
+
+        // Decap expects: "authorization:github:success:" + JSON.stringify({ token })
+        function successMessage() {
+          return "authorization:github:success:" + JSON.stringify({ token: token });
+        }
+
         function receiveMessage(event) {
           if (event.data === "authorizing:github") {
-            window.opener.postMessage("authorization:github:success:${payload}", "${origin}");
-            window.removeEventListener("message", receiveMessage, false);
-            window.close();
+            try {
+              window.opener.postMessage(successMessage(), origin);
+            } finally {
+              window.removeEventListener("message", receiveMessage, false);
+              window.close();
+            }
           }
         }
+
         window.addEventListener("message", receiveMessage, false);
-        window.opener.postMessage("authorizing:github", "${origin}");
+
+        // Kick off the handshake
+        window.opener.postMessage("authorizing:github", origin);
       })();
     </script>
   </body>
 </html>`);
   } catch (error) {
-    const safeError = String(error.message || error).replace(/"/g, "&quot;");
-    res.setHeader("Content-Type", "text/html");
+    // Also escape origin safely here
+    const safeOrigin = JSON.stringify(origin);
+    const safeError = JSON.stringify(String(error.message || error));
+
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
     res.status(400).send(`<!doctype html>
 <html>
   <body>
     <script>
-      window.opener.postMessage("authorization:github:error:${safeError}", "${origin}");
-      window.close();
+      (function() {
+        var origin = ${safeOrigin};
+        var err = ${safeError};
+        if (window.opener && window.opener.postMessage) {
+          window.opener.postMessage("authorization:github:error:" + err, origin);
+        }
+        window.close();
+      })();
     </script>
   </body>
 </html>`);
