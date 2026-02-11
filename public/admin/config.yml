@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: <OWNER>/<REPO>
+  repo: jmullins24/rivermarkgroup-site
   branch: main
   base_url: https://rivermarkgroup-site-git-main-jmullins24s-projects.vercel.app
   auth_endpoint: auth
