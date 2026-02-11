@@ -1,7 +1,7 @@
 ---
 title: "Portfolio analytics redesign for a regional bank"
 description: "Aligned risk and growth metrics across retail and commercial portfolios with a unified analytics framework."
-date: "2025-06-12"
+publishDate: "2025-06-12"
 ---
 ## Situation
 Leadership teams were relying on inconsistent metrics across business lines, making it difficult to prioritize capital allocation and track portfolio health.

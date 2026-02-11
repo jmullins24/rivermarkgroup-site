@@ -1,7 +1,7 @@
 ---
 title: "Designing an analytics operating model that scales"
 description: "How to balance centralized governance with distributed analytics teams."
-date: "2025-08-05"
+publishDate: "2025-08-05"
 ---
 ## Executive summary
 As analytics programs mature, leaders need clarity on ownership, data governance, and decision rights. A strong operating model creates consistency while keeping teams close to the business.

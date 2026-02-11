@@ -1,7 +1,7 @@
 ---
 title: "Automation governance without slowing teams down"
 description: "How to create guardrails for automation while keeping delivery fast."
-date: "2025-12-02"
+publishDate: "2025-12-02"
 ---
 ## Executive summary
 Automation programs need guardrails that protect risk, security, and compliance. The goal is to create fast review cycles, not bottlenecks.

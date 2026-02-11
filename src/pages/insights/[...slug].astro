@@ -4,7 +4,8 @@ import Container from "../../components/Container.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const insights = await getCollection("insights");
+  const isProd = import.meta.env.PROD;
+  const insights = await getCollection("insights", ({ data }) => (isProd ? !data.draft : true));
   return insights.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry }
@@ -18,7 +19,7 @@ const { Content } = await entry.render();
   <section class="py-16 md:py-24">
     <Container>
       <p class="text-xs uppercase tracking-[0.2em] text-ink-600">
-        Insight · {entry.data.date}
+        Insight · {entry.data.publishDate.toISOString().slice(0, 10)}
       </p>
       <h1 class="mt-4 text-4xl md:text-5xl">{entry.data.title}</h1>
       <p class="mt-4 max-w-2xl text-lg text-ink-600">
