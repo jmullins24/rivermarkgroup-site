@@ -2,7 +2,7 @@ backend:
   name: github
   repo: <OWNER>/<REPO>
   branch: main
-  base_url: https://rivermarkgroup-site-ds4qtjbm0-jmullins24s-projects.vercel.app
+  base_url: https://rivermarkgroup-site-git-main-jmullins24s-projects.vercel.app
   auth_endpoint: auth
 
 publish_mode: editorial_workflow
