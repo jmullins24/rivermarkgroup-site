@@ -5,7 +5,9 @@ import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const isProd = import.meta.env.PROD;
-  const insights = await getCollection("insights", ({ data }) => (isProd ? !data.draft : true));
+  const insights = await getCollection("insights", ({ data }) =>
+    isProd ? !data.draft : true
+  );
   return insights.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry }
@@ -15,16 +17,31 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
+
 <BaseLayout title={`${entry.data.title} | Rivermark Group`} description={entry.data.description}>
   <section class="py-16 md:py-24">
     <Container>
       <p class="text-xs uppercase tracking-[0.2em] text-ink-600">
         Insight · {entry.data.publishDate.toISOString().slice(0, 10)}
       </p>
+
       <h1 class="mt-4 text-4xl md:text-5xl">{entry.data.title}</h1>
+
       <p class="mt-4 max-w-2xl text-lg text-ink-600">
         {entry.data.description}
       </p>
+
+      {entry.data.heroImage && (
+        <figure class="mt-10">
+          <img
+            src={entry.data.heroImage}
+            alt={entry.data.title}
+            loading="lazy"
+            class="w-full max-h-[520px] object-cover rounded-2xl"
+          />
+        </figure>
+      )}
+
       <div class="markdown mt-10 space-y-6 text-ink-700">
         <Content />
       </div>
