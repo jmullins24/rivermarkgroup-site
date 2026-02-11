@@ -1,10 +1,8 @@
 backend:
   name: github
-  # Replace with your GitHub repository, e.g. rivermarkgroup/rivermarkgroup-site
   repo: <OWNER>/<REPO>
   branch: main
-  # Replace with your deployed OAuth helper host, e.g. https://rivermark-oauth.vercel.app
-  base_url: https://<your-oauth-host>
+  base_url: https://rivermarkgroup-site-ds4qtjbm0-jmullins24s-projects.vercel.app
   auth_endpoint: auth
 
 publish_mode: editorial_workflow
