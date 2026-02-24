@@ -1,13 +1,21 @@
 ---
-title: "Automation roadmap for a logistics provider"
-description: "Prioritized automation opportunities across billing, claims, and fleet operations."
-publishDate: "2025-11-18"
+title: "Logistics Operations: Automation Roadmap"
+description: Scaling efficiency across billing and fleet management through
+  strategic governance.
+publishDate: 2025-11-18
 ---
 ## Situation
-Multiple teams were pursuing automation independently, with limited governance and overlapping tool investments.
+
+Siloed teams and overlapping software investments were hindering the client’s ability to scale automation effectively.
 
 ## Approach
-We ran discovery sessions, scored automation candidates, and designed a governance model for intake, security, and ROI tracking.
+
+We bridged the gap between IT and Operations by:
+
+* Discovery: Identifying friction points in billing and claims.
+* Prioritization: Scoring automation candidates by ROI and complexity.
+* Governance: Designing a framework for secure, centralized intake.
 
 ## Result
-Leadership adopted a 12-month automation roadmap with clear ownership, staged pilots, and a repeatable intake process.
+
+Delivered a board-ready 12-month roadmap. The client now has a structured path to automate fleet operations with clear KPIs, dedicated ownership, and a proven model for rolling out future pilots.
