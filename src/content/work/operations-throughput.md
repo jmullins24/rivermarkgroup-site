@@ -10,15 +10,13 @@ Growth in patient volume created critical bottlenecks across intake, scheduling,
 
 ## Approach
 
-
 We restored operational flow by:
+
 * **Workflow Mapping:** Identifying friction points in end-to-end patient transitions.
 * **Role Clarity:** Defining clear ownership across departments to eliminate silos.
 * **Performance Management:** Introducing weekly operational reviews tied to real-time throughput targets.
 
-
-
 ## Result
 
-
-The network successfully reduced intake cycle time and gained full visibility into the referral pipeline. We established durable operational KPIs that now align daily performance with leadership’s strategic priorities.
+The network successfully reduced intake cycle time and gained full visibility into the referral pipeline. We established durable operational KPIs that now align daily performance with leadership’s strategic priorities. 
+Beyond the immediate throughput gains, this framework provided the leadership team with a scalable blueprint for launching three new satellite clinics without increasing administrative headcount.
