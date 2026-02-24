@@ -1,13 +1,17 @@
 ---
-title: "Portfolio analytics redesign for a regional bank"
-description: "Aligned risk and growth metrics across retail and commercial portfolios with a unified analytics framework."
-publishDate: "2025-06-12"
+title: "Regional Bank: Portfolio Analytics Redesign"
+description: Aligning risk and growth metrics across retail and commercial
+  portfolios with a unified analytics framework.
+publishDate: 2025-06-12
 ---
 ## Situation
 Leadership teams were relying on inconsistent metrics across business lines, making it difficult to prioritize capital allocation and track portfolio health.
 
 ## Approach
-We ran a KPI alignment workshop, created a single metric dictionary, and assessed the data pipelines supporting credit, deposit, and profitability reporting.
+We unified the bank's analytical foundation by:
+* **KPI Alignment:** Facilitating workshops to define a single, cross-functional metric dictionary.
+* **Data Audit:** Assessing pipelines supporting credit, deposit, and profitability reporting.
+* **Governance Design:** Establishing a quarterly cadence for data quality oversight and metric evolution.
 
 ## Result
-The bank adopted a shared portfolio scorecard, reduced duplicate reporting, and established a quarterly governance cadence for data quality and metric changes.
+The bank adopted a shared portfolio scorecard that reduced duplicate reporting and improved executive decision-making. This framework now ensures that risk and growth are measured consistently across all retail and commercial sectors.
