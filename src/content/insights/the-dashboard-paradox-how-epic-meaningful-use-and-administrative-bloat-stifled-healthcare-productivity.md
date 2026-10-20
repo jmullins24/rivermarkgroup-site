@@ -59,3 +59,10 @@ To restore operational efficiency, leadership teams must:
 3. Decouple Growth from Administrative Overhead: Resist the impulse to add administrative headcount to manage software complexity; instead, simplify the underlying processes before automating or scaling them.
 
 Technology should serve as a force multiplier for delivery—not a tax on the people providing it.
+
+## References & Sources
+
+1. Office of the National Coordinator for Health Information Technology (ONC): *National Trends in Hospital and Physician Adoption of EHRs (2008–2021)*. Documented acute care hospital EHR adoption growth from under 10% in 2008 to ~96% following HITECH Act incentives.
+2. Sinsky, C., Colligan, L., Li, L., et al. (2016): *"Allocation of Physician Time in Ambulatory Care: A Time and Motion Study in 4 Specialties."* *Annals of Internal Medicine* / American Medical Association. Established that physicians spend nearly 2 hours on EHR tasks and desk work for every 1 hour of direct patient care.   
+3. Bureau of Labor Statistics & Healthcare Data Analysis (1970–2019): Historical tracking of U.S. healthcare personnel growth showing physician growth (~150%–200%) relative to healthcare administrator growth (>3,000%).   
+4. Arndt, B. G., Beasley, J. W., Watkinson, M. D., et al. (2017): *"Tethered to the EHR: Primary Care Physician Workload Assessment."* *Annals of Family Medicine*. Documented evening EHR logging ("pajama time") and inbox/documentation burden outside clinic operating hours.
