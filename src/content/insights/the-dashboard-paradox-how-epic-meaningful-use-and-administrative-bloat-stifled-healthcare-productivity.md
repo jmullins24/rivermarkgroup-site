@@ -1,7 +1,7 @@
 ---
 title: 'The Dashboard Paradox: How Epic, "Meaningful Use," and Administrative
   Bloat Stifled Healthcare Productivity'
-publishDate: 2026-10-20T12:39:00.000-04:00
+publishDate: 2026-10-19T12:39:00.000-04:00
 draft: false
 ---
 In 2009, the passing of the Health Information Technology for Economic and Clinical Health (HITECH) Act was hailed as a watershed moment for modern medicine. With roughly $30 billion allocated in federal financial incentives, the goal was simple: push American healthcare out of paper charts and into the digital era.
